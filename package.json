@@ -1,0 +1,23 @@
+{
+  "name": "atemporal-back-end",
+  "version": "1.0.0",
+  "description": "Espacio dedicado al back-end de la plataforma",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saulrs98/Atemporal-Back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saulrs98/Atemporal-Back-end/issues"
+  },
+  "homepage": "https://github.com/Saulrs98/Atemporal-Back-end#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
