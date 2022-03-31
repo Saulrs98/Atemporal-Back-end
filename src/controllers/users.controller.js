@@ -1,4 +1,4 @@
-const { User } = require('../models/User')
+import { User } from '../models/User'
 
 const userController = {
   getAll: (req, res) => {
