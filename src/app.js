@@ -1,30 +1,24 @@
-const express = require("express")
-const colors = require('colors');
+const express = require('express')
+const morgan = require('morgan')
+const cors = require('cors')
 
+const { initRoutes } = require('./routes')
+
+// Constants
+const PORT = 4000
 
 const app = express()
 
-const port = 4000
-
+// Middlewares
+app.use(cors()) // Una configuracion de seguridad entre headers
+app.use(express.json()) // Parsea lo que llega al servidor en formato json
+app.use(morgan('dev')) // Muestra en consola la url, tiempo y status solicitado
 
 // undefined
 
+initRoutes(app)
 
-app.get('/', (req, res) => {
-  res.json({
-    message: {
-      otro: "Prueba de mensaje"
-    }
-  })
-})
-app.get('/hola', (req, res) => {
-  res.send('Ruta hola')
-})
-
-app.get('/hola2', (req, res) => {
-  res.send('Ruta hola2')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`.bgWhite.red)
-})
+module.exports = {
+  PORT,
+  app
+}
