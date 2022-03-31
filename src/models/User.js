@@ -1,9 +1,9 @@
 import axios from 'axios'
-
+import { knex } from '../db'
 const User = {
 
   getAll: () => {
-    return axios.get('https://pokeapi.co/api/v2/pokemon?offset=20&limit=20')
+    return knex.select().table('usuarios')
   }
 }
 

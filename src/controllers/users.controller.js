@@ -1,15 +1,13 @@
 import { User } from '../models/User'
 
 const userController = {
-  getAll: (req, res) => {
-    User.getAll()
-      .then(resp => {
-        console.log(resp.data)
-        res.json({ msg: resp.data.results })// /usuarios/
-      })
-      .catch(e => {
-        console.log(e)
-      })
+  getAll: async (req, res) => {
+    try {
+      const users = await User.getAll()
+      res.json({ data: users })
+    } catch (error) {
+      res.json({ msg: 'error' })
+    }
   }
 }
 

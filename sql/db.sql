@@ -1,17 +1,18 @@
-CREATE DATABASE atemporal IF NOT EXISTS;
+CREATE DATABASE atemporal;
 
 USE atemporal;
 
 CREATE TABLE usuarios (
     id_usuario int,
     id_rol int,
-    isAdmin boolean,
+    esAdmin boolean,
     nombre varchar(255),
     celular varchar(255),
     correo_electronico varchar(255),
     password varchar(255),
     auth_google integer,
     esta_activo boolean,
+    foto_cuenta varchar(255),
     fecha_creado date,
     fecha_actualizado date
 );
