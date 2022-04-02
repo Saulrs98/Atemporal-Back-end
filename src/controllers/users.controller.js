@@ -6,6 +6,7 @@ const userController = {
       const users = await User.getAll()
       res.json({ data: users })
     } catch (error) {
+      console.log(error)
       res.json({ msg: 'error' })
     }
   }
