@@ -28,5 +28,15 @@ export const userController = {
       console.log(error)
       res.json({ msg: 'error' })
     }
+  },
+  putOne: async (req, res) => {
+    try {
+      console.log(req.body)
+      const resp = await User.updateOne(req.params.id, req.body)
+      res.json({ rows_affected: resp })
+    } catch (error) {
+      console.log(error)
+      res.json({ msg: 'error' })
+    }
   }
 }

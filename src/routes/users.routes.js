@@ -7,5 +7,6 @@ router.get('/', userController.getAll)
 router.get('/:id', userController.getOne)
 
 router.post('/', userController.postOne)
+router.put('/:id', userController.putOne)
 
 module.exports = router
