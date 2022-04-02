@@ -1,7 +1,6 @@
-import axios from 'axios'
 import { knex } from '../db'
-const User = {
 
+const User = {
   getAll: () => {
     return knex.select().table('usuarios')
   }

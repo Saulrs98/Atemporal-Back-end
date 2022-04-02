@@ -1,15 +1,17 @@
+DROP DATABASE IF EXISTS atemporal;
+
 CREATE DATABASE atemporal;
 
-USE atemporal;
+use atemporal;
 
 CREATE TABLE usuarios (
     id_usuario int,
     id_rol int,
-    esAdmin boolean,
+    es_admin boolean,
     nombre varchar(255),
     celular varchar(255),
     correo_electronico varchar(255),
-    password varchar(255),
+    pass varchar(255),
     auth_google integer,
     esta_activo boolean,
     foto_cuenta varchar(255),
@@ -22,7 +24,7 @@ CREATE TABLE roles (
     nombre varchar(255),
     esta_activo boolean,
     fecha_creado date,
-   	fecha_actualizado date
+    fecha_actualizado date
 );
 
 CREATE TABLE permisos (
@@ -30,7 +32,7 @@ CREATE TABLE permisos (
     nombre varchar(255),
     esta_activo boolean,
     fecha_creado date,
-   	fecha_actualizado date
+    fecha_actualizado date
 );
 
 CREATE TABLE roles_permisos (
@@ -38,7 +40,7 @@ CREATE TABLE roles_permisos (
     id_permiso int,
     esta_activo boolean,
     fecha_creado date,
-   	fecha_actualizado date
+    fecha_actualizado date
 );
 
 CREATE TABLE eventos (
@@ -59,7 +61,7 @@ CREATE TABLE eventos (
     archivo_itinerario varchar(255),
     esta_activo boolean,
     fecha_creado date,
-   	fecha_actualizado date
+    fecha_actualizado date
 );
 
 CREATE TABLE usuarios_eventos_crean (
@@ -69,7 +71,7 @@ CREATE TABLE usuarios_eventos_crean (
     esta_aprobado boolean,
     esta_activo boolean,
     fecha_creado date,
-   	fecha_actualizado date
+    fecha_actualizado date
 );
 
 CREATE TABLE usuarios_eventos_reservan (
@@ -80,7 +82,7 @@ CREATE TABLE usuarios_eventos_reservan (
     codigo_qr varchar(255),
     esta_activo boolean,
     fecha_creado date,
-   	fecha_actualizado date
+    fecha_actualizado date
 );
 
 CREATE TABLE categorias (
@@ -88,7 +90,7 @@ CREATE TABLE categorias (
     nombre varchar(255),
     esta_activo boolean,
     fecha_creado date,
-   	fecha_actualizado date
+    fecha_actualizado date
 );
 
 CREATE TABLE eventos_categorias (
@@ -97,7 +99,7 @@ CREATE TABLE eventos_categorias (
     id_evento int,
     esta_activo boolean,
     fecha_creado date,
-   	fecha_actualizado date
+    fecha_actualizado date
 );
 
 CREATE TABLE metodos_pago (
@@ -105,7 +107,7 @@ CREATE TABLE metodos_pago (
     nombre varchar(255),
     esta_activo boolean,
     fecha_creado date,
-   	fecha_actualizado date
+    fecha_actualizado date
 );
 
 CREATE TABLE eventos_metodos (
@@ -114,7 +116,7 @@ CREATE TABLE eventos_metodos (
     id_evento int,
     esta_activo boolean,
     fecha_creado date,
-   	fecha_actualizado date
+    fecha_actualizado date
 );
 
 /*AQUELLAS TABLAS SIN LLAVES FORANEAS*/
@@ -139,7 +141,7 @@ ADD CONSTRAINT pk_eventos PRIMARY KEY (id_evento);
 
 ALTER TABLE usuarios
 ADD CONSTRAINT pk_usuarios PRIMARY KEY (id_usuario),
-ADD CONSTRAINT fk_roles_usuarios FOREIGN KEY (id_rol) REFERENCES roles(id_rol);
+ADD CONSTRAINT fk_rol_usuarios FOREIGN KEY (id_rol) REFERENCES roles(id_rol);
 
 /*TABLAS CON LLAVES PRIMARIAS COMPUESTAS */
 
