@@ -9,7 +9,7 @@ CREATE TABLE roles_permisos (
     id_permiso int NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE roles_usuarios(
@@ -17,7 +17,7 @@ CREATE TABLE roles_usuarios(
     id_rol int NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE usuarios_eventos_crean (
@@ -27,7 +27,7 @@ CREATE TABLE usuarios_eventos_crean (
     esta_aprobado boolean NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE usuarios_eventos_reservan (
@@ -38,7 +38,7 @@ CREATE TABLE usuarios_eventos_reservan (
     codigo_qr varchar(255) NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE eventos_metodos (
@@ -47,7 +47,7 @@ CREATE TABLE eventos_metodos (
     id_evento int NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE eventos_categorias (
@@ -56,7 +56,7 @@ CREATE TABLE eventos_categorias (
     id_evento int NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE usuarios (
@@ -71,7 +71,7 @@ CREATE TABLE usuarios (
     esta_activo boolean NOT NULL,
     foto_cuenta varchar(255),
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE roles (
@@ -79,7 +79,7 @@ CREATE TABLE roles (
     nombre varchar(255) NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE permisos (
@@ -87,7 +87,7 @@ CREATE TABLE permisos (
     nombre varchar(255) NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE eventos (
@@ -108,7 +108,7 @@ CREATE TABLE eventos (
     archivo_itinerario varchar(255) NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE categorias (
@@ -116,7 +116,7 @@ CREATE TABLE categorias (
     nombre varchar(255) NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 CREATE TABLE metodos_pago (
@@ -124,7 +124,7 @@ CREATE TABLE metodos_pago (
     nombre varchar(255) NOT NULL,
     esta_activo boolean NOT NULL,
     fecha_creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fecha_actualizado date
+    fecha_actualizado TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
 );
 
 /*AQUELLAS TABLAS SIN LLAVES FORANEAS*/
