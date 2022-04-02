@@ -38,5 +38,14 @@ export const userController = {
       console.log(error)
       res.json({ msg: 'error' })
     }
+  },
+  deleteOne: async (req, res) => {
+    try {
+      const resp = await User.deleteOne(req.params.id)
+      res.json({ rows_affected: resp })
+    } catch (error) {
+      console.log(error)
+      res.json({ msg: 'error' })
+    }
   }
 }

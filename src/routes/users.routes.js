@@ -9,4 +9,6 @@ router.get('/:id', userController.getOne)
 router.post('/', userController.postOne)
 router.put('/:id', userController.putOne)
 
+router.delete('/:id', userController.deleteOne)
+
 module.exports = router
