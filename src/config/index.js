@@ -7,7 +7,7 @@ export const globalConfig = {
       database: 'atemporal',
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD_DEV,
-      port: 3307
+      port: process.env.DB_PORT
     },
     cloudinay: {
       cloud_name: '',
