@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS permisos;
 DROP TABLE IF EXISTS eventos;
 DROP TABLE IF EXISTS categorias;
 DROP TABLE IF EXISTS metodos_pago;
+DROP DATABASE IF EXISTS atemporal;
 
 
 
