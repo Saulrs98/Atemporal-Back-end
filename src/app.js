@@ -7,6 +7,7 @@ import { initRoutes } from './routes'
 const PORT = 4000
 
 const app = express()
+app.disable('etag')
 
 // Middlewares
 app.use(cors()) // Una configuracion de seguridad entre headers
