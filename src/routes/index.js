@@ -1,7 +1,5 @@
-const routerUser = require('./users.routes')
+import routerUser from './users.routes'
 
-const initRoutes = (app) => {
+export const initRoutes = (app) => {
   app.use('/usuarios', routerUser)
 }
-
-module.exports = { initRoutes }
