@@ -1,11 +1,12 @@
+import config from '../config'
 export const knex = require('knex')({
   client: 'mysql',
   connection: {
-    host: '127.0.0.1',
-    port: 3307,
-    user: 'atemporal',
-    password: 'Atemporal1',
-    database: 'atemporal'
+    host: config.databaseConfig.host,
+    port: config.databaseConfig.port,
+    user: config.databaseConfig.user,
+    password: config.databaseConfig.password,
+    database: config.databaseConfig.database
   },
   pool: {
     min: 0,
