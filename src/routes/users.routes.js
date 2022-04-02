@@ -7,7 +7,7 @@ router.get('/', userController.getAll)
 router.get('/:id', userController.getOne)
 
 router.post('/', userController.postOne)
-router.put('/:id', userController.putOne)
+router.put('/:id', userController.updateOne)
 
 router.delete('/:id', userController.deleteOne)
 

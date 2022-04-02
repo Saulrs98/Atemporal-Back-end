@@ -29,7 +29,7 @@ export const userController = {
       res.json({ msg: 'error' })
     }
   },
-  putOne: async (req, res) => {
+  updateOne: async (req, res) => {
     try {
       console.log(req.body)
       const resp = await User.updateOne(req.params.id, req.body)
